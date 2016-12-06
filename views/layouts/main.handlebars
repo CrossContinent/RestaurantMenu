@@ -1,10 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<link rel="stylesheet" href="/assets/css/style.css" type="text/css" />
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Menu</title>
+		<link rel="stylesheet" href="./assets/css/style.css" type="text/css" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" crossorigin="anonymous">
+		<script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" crossorigin="anonymous"></script>
 	</head>
 	<body>
+		<header>
+			<div class="header-top col-lg-12">
+				<div class="header-left col-lg-4">
+					<!-- <p>NJ Home Inspector License # 24GI00122700</p>
+					<p>NJ Radon Measurement Technician License # MET13195</p>
+					<p>NJ WDI License # 56155B</p>
+					<p>NY Home Inspector License #16000065701</p> -->
+				</div>
+				<div class="header-logo col-lg-4">
+					<img src="./assets/img/logo.jpg" alt="Restaurant Logo" />
+				</div>
+				<div class="header-right col-lg-4">
+					<img src="./assets/img/phone-icon.png" id="phone-icon" alt="phone" />
+					<h3 id="phone-number"><a href="tel:973-555-5555">973-555-5555</a></h3>
+				</div>
+			</div>
+			<nav>
+				<ul>
+					<li class='nav-item'><a href="../index">Home</a></li>
+					<li class='nav-item'><a href="./menu.html">Menu</a></li>
+					<li class='nav-item'><a href="../admin">Admin</a></li>
+					<li class='nav-item'><a href="./standards.html">About</a></li>
+					<li class='nav-item'><a href="./radonfaq.html">Contact</a></li>
+				</ul>
+			</nav>
+		</header>
 		{{{ body }}}
 	</body>
-</HTML>
+</html>

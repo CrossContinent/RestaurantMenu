@@ -8,11 +8,11 @@
           {{this.name}}
           <p>{{this.description}}</p>
           <p><b>${{this.price}}</b></p>
-          <form action="items/update/{{this.id}}?_method=PUT" method="POST">
+          <form action="admin/update/{{this.id}}?_method=PUT" method="POST">
             <input type="hidden" name="soldout" value="true">
             <button type="submit">Mark Sold Out</button>
           </form>
-          <form action="items/delete/{{this.id}}?_method=DELETE" method="POST">
+          <form action="admin/delete/{{this.id}}?_method=DELETE" method="POST">
             <button type="submit">Remove From Menu</button>
           </form>
         </li>
@@ -28,7 +28,7 @@
       {{#if this.soldout}}
         <li>
           {{this.name}}
-          <form action="items/update/{{this.id}}?_method=PUT" method="POST">
+          <form action="admin/update/{{this.id}}?_method=PUT" method="POST">
             <input type="hidden" name="soldout" value="false">
             <button type="submit">Back in Stock</button>
           </form>
@@ -40,14 +40,17 @@
 
 <div class="add-item">
   <h2>Add an Item</h2>
-  <form class="create-update-form" action="items/create" method="POST">
+  <form class="create-update-form" action="admin/create" method="POST">
     <div class="form-group">
-      <label for="item_name">Item Name:</label>
-      <input type="text" id="item_name" name="name">
-      <label for="desc">Description:</label>
-      <textarea id="desc" name="description" rows="8" cols="80"></textarea>
-      <label for="price">Price:</label>
-      <input type="text" id="price" name="price">
+      <label for="item_name">Item Name:
+        <input type="text" id="item_name" name="name">
+      </label>
+      <label for="desc">Description:
+        <textarea id="desc" name="description" rows="6" cols="55"></textarea>
+      </label>
+      <label for="price">Price:
+        <input type="text" id="price" name="price">
+      </label>
     </div>
     <button type="submit">Add Item</button>
   </form>

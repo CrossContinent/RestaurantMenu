@@ -1,9 +1,54 @@
 body {
   background-color: #056839;
+  margin: 0 auto;
 }
 
 h1 {
   text-align: center;
+}
+
+nav {
+  text-align: center;
+  background-color: #28b;
+	box-shadow: 0 3px 10px grey;
+	clear: both;
+	min-height: 40px;
+	height: 100%;
+	margin: 0 auto;
+}
+
+.nav-item a {
+	color: #fff;
+}
+
+.header-left {
+	text-align: left;
+	padding-top: 15px;
+}
+
+.header-logo {
+	margin: 10px 0 10px 0;
+}
+
+.header-right {
+	text-align: center;
+}
+
+.nav-item {
+	display: inline-block;
+	margin: 10px 7px 0 7px;
+	font-size: large;
+}
+
+#phone-icon {
+	height: 50px;
+	width: 50px;
+	margin: 35px 0 10px 0;
+}
+
+#phone-number {
+	font-weight: bold;
+	margin-top: 0px;
 }
 
 .current-items {
