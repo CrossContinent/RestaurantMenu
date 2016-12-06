@@ -11,9 +11,6 @@ var orm = {
   },
   create: function(table, cols, vals, cb) {
     var queryString = 'INSERT INTO ' + table + ' (' + cols.toString() + ') VALUES (?)';
-    // previous code
-    // queryString += cols.toString();
-    // queryString += ') VALUES (?)';
     console.log(queryString);
     connection.query(queryString, [vals], function(err, result) {
       if(err) throw err;
@@ -31,9 +28,6 @@ var orm = {
   },
   delete: function(table, condition, cb) {
     var queryString = 'DELETE FROM ' + table + ' WHERE ' + condition;
-    // previous code below
-    // queryString += ' WHERE ';
-    // queryString += condition;
     console.log(queryString);
     connection.query(queryString, function(err, result) {
       if(err) throw err;
