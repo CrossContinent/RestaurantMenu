@@ -1,0 +1,19 @@
+body {
+  background-color: #056839;
+}
+
+h1 {
+  text-align: center;
+}
+
+.current-items {
+  float: left;
+}
+
+.sold-out-items {
+  float: right;
+}
+
+.add-item {
+  text-align: center;
+}

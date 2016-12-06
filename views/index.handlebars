@@ -1,0 +1,61 @@
+<h1>The Menu Admin Console</h1>
+<div class="current-items">
+  <h2>Items that are on our menu!</h2>
+
+  <ul>
+    {{#each items}}
+      {{#unless this.soldout}}
+        <li>
+          {{this.name}}
+          <p>{{this.description}}</p>
+          <p><b>{{this.price}}</b></p>
+          <form action="items/update/{{this.id}}?_method=PUT" method="POST">
+            <input type="hidden" name="soldout" value="true">
+            <button type="submit">Mark Sold Out</button>
+          </form>
+          <form action="items/delete/{{this.id}}?_method=DELETE" method="POST">
+            <button type="submit">Remove From Menu</button>
+          </form>
+        </li>
+      {{/unless}}
+    {{/each}}
+  </ul>
+</div>
+
+</div>
+
+<div class="sold-out-items">
+  <h2>Items that are Sold Out!</h2>
+
+
+  <ul>
+    {{#each items}}
+      {{#if this.soldout}}
+        <li>
+          {{this.name}}
+
+          <form action="items/update/{{this.id}}?_method=PUT" method="POST">
+            <input type="hidden" name="soldout" value="false">
+            <button type="submit">Back in Stock</button>
+          </form>
+        </li>
+      {{/if}}
+    {{/each}}
+  </ul>
+</div>
+
+<div class="add-item">
+  <h2>Add an Item</h2>
+  <form class="create-update-form" action="items/create" method="POST">
+
+    <div class="form-group">
+      <label for="item_name">Item Name:</label>
+      <input type="text" id="item_name" name="name">
+      <label for="desc">Description:</label>
+      <textarea id="desc" name="description" rows="8" cols="80"></textarea>
+      <label for="price">Price:</label>
+      <input type="text" id="price" name="price">
+    </div>
+    <button type="submit">Add Item</button>
+  </form>
+</div>
