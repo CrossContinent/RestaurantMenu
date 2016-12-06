@@ -58,7 +58,8 @@ nav {
 /*.add-item {
   text-align: center;
 }
+*/
 
 .sold-out-items {
-  float: right;
-}*/
+    text-align: center;
+}

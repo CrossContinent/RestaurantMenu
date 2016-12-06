@@ -5,7 +5,7 @@
     {{#each items}}
       {{#unless this.soldout}}
         <li>
-          {{this.name}}
+          <h4><b>{{this.name}}</b></h4>          
           <p>{{this.description}}</p>
           <p><b>${{this.price}}</b></p>
           <form action="admin/update/{{this.id}}?_method=PUT" method="POST" class="btn-group">
