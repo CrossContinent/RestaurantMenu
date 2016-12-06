@@ -7,8 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
-    "type": "",
-    "url": ""
+    "type": "git",
+    "url": "https://github.com/rparker24/RestaurantMenu"
   },
   "keywords": [
     "menu"
@@ -16,7 +16,7 @@
   "author": "Robert M. Parker",
   "license": "ISC",
   "bugs": {
-    "url": ""
+    "url": "https://github.com/rparker24/RestaurantMenu/issues"
   },
   "homepage": "",
   "dependencies": {

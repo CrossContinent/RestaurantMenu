@@ -1,5 +1,5 @@
 <h1>The Menu Admin Console</h1>
-<div class="current-items">
+<div class="current-items col-md-4">
   <h2>Items that are on our menu!</h2>
   <ul>
     {{#each items}}
@@ -8,20 +8,22 @@
           {{this.name}}
           <p>{{this.description}}</p>
           <p><b>${{this.price}}</b></p>
-          <form action="admin/update/{{this.id}}?_method=PUT" method="POST">
+          <form action="admin/update/{{this.id}}?_method=PUT" method="POST" class="btn-group">
             <input type="hidden" name="soldout" value="true">
-            <button type="submit">Mark Sold Out</button>
+            <button type="submit" class="btn btn-warning">Mark Sold Out</button>
           </form>
-          <form action="admin/delete/{{this.id}}?_method=DELETE" method="POST">
-            <button type="submit">Remove From Menu</button>
+          <form action="admin/delete/{{this.id}}?_method=DELETE" method="POST" class="btn-group">
+            <button type="submit" class="btn btn-danger">Remove From Menu</button>
           </form>
+          <br>
+          <br>
         </li>
       {{/unless}}
     {{/each}}
   </ul>
 </div>
 
-<div class="sold-out-items">
+<div class="sold-out-items col-md-4">
   <h2>Items that are Sold Out!</h2>
   <ul>
     {{#each items}}
@@ -30,7 +32,7 @@
           {{this.name}}
           <form action="admin/update/{{this.id}}?_method=PUT" method="POST">
             <input type="hidden" name="soldout" value="false">
-            <button type="submit">Back in Stock</button>
+            <button type="submit" class="btn btn-success">Back in Stock</button>
           </form>
         </li>
       {{/if}}
@@ -38,20 +40,20 @@
   </ul>
 </div>
 
-<div class="add-item">
+<div class="add-item col-md-4">
   <h2>Add an Item</h2>
   <form class="create-update-form" action="admin/create" method="POST">
     <div class="form-group">
       <label for="item_name">Item Name:
         <input type="text" id="item_name" name="name">
       </label>
+      <label for="price">Price: $
+        <input type="text" id="price" name="price">
+      </label>
       <label for="desc">Description:
         <textarea id="desc" name="description" rows="6" cols="55"></textarea>
       </label>
-      <label for="price">Price:
-        <input type="text" id="price" name="price">
-      </label>
     </div>
-    <button type="submit">Add Item</button>
+    <button type="submit" class="btn btn-primary">Add Item</button>
   </form>
 </div>
